@@ -2,12 +2,14 @@
     <md-card>
         <md-card-title>
             <md-card-title-media>
-                <div class='md-media card-media' layout-padding>
+                <div class='md-media-lg card-media' layout-padding>
                     <img ng-src='{{user.profile.picture}}' alt='profile-picture'>
                 </div>
+                
                 <md-card-actions layout='column' layout-align='end center'>
-                    <md-button ng-click='user.getMessage()'>Get Message</md-button>
-                    <md-button ng-click='user.getSecretMessage()'>Get Secret Message</md-button>
+                    <h6>API Server:{{user.hostserver}}</h6>
+                    <md-button ng-click='user.getMessage()'>Public API without auth0</md-button>
+                    <md-button ng-click='user.getSecretMessage()'>Private API With auth0</md-button>
                 </md-card-actions>
             </md-card-title-media>
             <md-card-title-text>
@@ -18,3 +20,4 @@
         </md-card-title>
     </md-card>
 </md-content>
+

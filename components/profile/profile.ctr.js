@@ -10,7 +10,8 @@
         vm.getMessage = getMessage;
         vm.getSecretMessage = getSecretMessage;
         vm.message;
-
+        vm.hostserver=appconst.serverurl;
+        //console.log(vm.hostserver);
         vm.profile = store.get('profile');
 
         function getMessage()

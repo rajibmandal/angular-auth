@@ -19,18 +19,12 @@
         vm.login = login;
         vm.logout = logout;
         vm.auth = auth;
-
+       
         function login() {
             auth.signin({}, function (profile, token) {
             
                 store.set('profile', profile)
                 store.set('id_token', token);
-                $timeout(function(){
-                        $location.path('/home');
-                },100);
-                
-            
-        
             });
         }
         function logout() {
